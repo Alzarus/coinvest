@@ -4,8 +4,8 @@ streamlit run <app_name.py>
 
 
 
-
-
+https://share.streamlit.io/
+https://share.streamlit.io/alzarus/coinvest/src/first_app.py
 
 Short answer, NO. But you can share the venv build scripts.
 
