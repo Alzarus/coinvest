@@ -1,3 +1,5 @@
+# https://coinmarketcap.com/api/documentation/v1/#tag/cryptocurrency
+
 import json
 import numpy as np
 import pandas as pd
@@ -5,18 +7,20 @@ import requests
 import streamlit as st
 import time
 
-# st.title("Dashboard - criptomoedas por CoinMarketCap")
+# st.title("Dashboard - criptomoedas por CoinMarketCap - https://coinmarketcap.com/ ")
 
 # df = pd.DataFrame({
 #     'first column': [1, 2, 3, 4],
 #     'second column': [10, 20, 30, 40]
 # })
 
-base_url = "https://pro-api.coinmarketcap.com/"
-url = base_url + "v1/cryptocurrency/listings/latest"
+base_url = "https://pro-api.coinmarketcap.com"
+url = base_url + "/v1/cryptocurrency/listings/latest"
+# url = base_url + "/v1/global-metrics/quotes/latest"
+
 parameters = {
     'start': '1',
-    'limit': '10',
+    'limit': '5',
     'convert': 'BRL'
 }
 headers = {
@@ -26,11 +30,10 @@ headers = {
 
 response = requests.get(url, headers=headers, params=parameters)
 json_response = response.json()
-# print(response.json())
-# print(json.dumps(json_response, indent=4))
+print(json.dumps(json_response, indent=4))
 
-response_data = json_response["data"]
-print(json.dumps(response_data[0], indent=4))
+# response_data = json_response["data"]
+# print(json.dumps(response_data[0], indent=4))
 # for r in response_data:
 #     print(r["name"])
 
