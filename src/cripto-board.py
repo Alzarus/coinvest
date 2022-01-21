@@ -9,9 +9,6 @@ import requests
 import streamlit as st
 import time
 
-# st.title("Dashboard - criptomoedas por CoinMarketCap\nhttps://coinmarketcap.com/ ")
-st.title("Investcrip - Dashboard para o seu investimento em Criptomoedas\n\nFonte dos dados: https://coinmarketcap.com/ ")
-
 BASE_URL = "https://pro-api.coinmarketcap.com"
 URL = BASE_URL + "/v1/cryptocurrency/listings/latest"
 # URL = BASE_URL + "/v1/global-metrics/quotes/latest"
@@ -72,6 +69,8 @@ def load_sidebar():
 
 
 def main():
+    # st.title("Dashboard - criptomoedas por CoinMarketCap\nhttps://coinmarketcap.com/ ")
+    st.title("Investcrip - Dashboard para o seu investimento em Criptomoedas\n\nFonte dos dados: https://coinmarketcap.com/ ")
     load_sidebar()
     # TODO: CRIAR DATA FRAME COM TODOS OS OBJETOS (MOEDAS) DA LISTA, APENAS PEGANDO OS DADOS QUE TENHO INTERESSE
     # TODO: CRIAR METODO ASYNC PARA ATUALIZAR O BOARD AUTOMATICAMENTE DPS DE X SEGUNDOS/MINUTOS
