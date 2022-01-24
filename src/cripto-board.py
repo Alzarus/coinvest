@@ -1,5 +1,9 @@
 # https://coinmarketcap.com/api/documentation/v1/#tag/cryptocurrency
 # https://docs.streamlit.io/library/api-reference
+# https://structurizr.com/dsl
+# https://github.com/structurizr/dsl
+# https://structurizr.com/share/36141/diagrams#SystemContext
+
 
 import json
 # from turtle import title
