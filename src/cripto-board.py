@@ -3,6 +3,7 @@
 # https://structurizr.com/dsl
 # https://github.com/structurizr/dsl
 # https://structurizr.com/share/36141/diagrams#SystemContext
+# https://nataniel-paiva.medium.com/cria%C3%A7%C3%A3o-de-uma-api-rest-com-python-76696d17bfb9
 
 
 import json

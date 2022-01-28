@@ -1,0 +1,19 @@
+@startuml "Investcrip-2-Container"
+!include https://raw.githubusercontent.com/kirchsth/C4-PlantUML/extended/C4_Container.puml
+
+Person(user, "Usuário", "")
+
+System_Boundary(c1, "Sistema Investcrip", "") {
+    Container(dash, "Dashboard", "Python - Streamlit", "Apresenta a interface que o usuário acessa")
+    Container(api, "API", "Python - Flask/Requests", "Possui as regras de negócio")
+    ContainerDb(db, "Banco de dados", "Postgres", "Armazena os dados coletados")
+    ' Container(collector, "Coletor de dados", "Python - Requests", "Coleta os dados externos sobre criptomoedas")
+}
+    Container(apiExt, "API CoinMarketCap", "HTTP", "Retorna os dados brutos sobre criptomoedas")
+
+Rel(user, dash, "Acessa e lê os gráficos", "")
+Rel(dash, api, "Busca os dados na API e os apresenta")
+Rel(api, db, "Lê, trata e escreve dados no banco")
+' Rel(collector, api, "Coleta os dados e os salva com segurança usando a API")
+Rel(api, apiExt, "Realiza requisição dos dados para a API externa")
+@enduml
