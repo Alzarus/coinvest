@@ -1,0 +1,14 @@
+@startuml "Investcrip-1-Context"
+!include https://raw.githubusercontent.com/kirchsth/C4-PlantUML/extended/C4_Container.puml
+
+Person(user, "Usuário", "")
+
+
+System(dash, "Dashboard", "Apresenta a interface que o usuário acessa")
+System(persistance, "Persistência/API", "Armazena os dados a serem fornecidos para o Dashboard e contém a regra de negócio")
+System(extApi, "Api CoinMarketCap", "Fornece os dados brutos sobre as criptomoedas")
+
+Rel(user, dash, "Acessa e lê os gráficos", "")
+Rel(dash, persistance, "Busca os dados na persistência e os apresenta")
+Rel(persistance, extApi, "Busca os dados na plataforma externa")
+@enduml
