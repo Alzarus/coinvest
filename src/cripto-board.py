@@ -35,14 +35,18 @@ HEADERS = {
 def load_data():
     global HEADERS, PARAMETERS
 
-    response = requests.get(URL, headers=HEADERS, params=PARAMETERS)
-    json_response = response.json()
-    total_coins = json_response["status"]["total_count"]
-    # print(json.dumps(json_response, indent=4))
-    json_response_data = json_response["data"]
-    for data in json_response_data:
-        data.pop("tags", None)
-    return json_response_data
+    try:
+        response = requests.get(URL, headers=HEADERS, params=PARAMETERS)
+        json_response = response.json()
+        total_coins = json_response["status"]["total_count"]
+        # print(json.dumps(json_response, indent=4))
+        json_response_data = json_response["data"]
+        for data in json_response_data:
+            data.pop("tags", None)
+        return json_response_data
+
+    except:
+        print('Error getting data from External API')
 
 
 def load_sidebar():
@@ -81,6 +85,7 @@ def main():
     # TODO: CRIAR METODO ASYNC PARA ATUALIZAR O BOARD AUTOMATICAMENTE DPS DE X SEGUNDOS/MINUTOS
     # TODO: REQUESTS -> BANCO DE DADOS -> MS DO DASH BUSCA NO BANCO DE DADOS (EVITAR A QUANTIDADE DE REQUESTS ELEVADA)
     # https://github.com/paduel/streamlit_finance_chart/blob/master/app.py
+    # COLOCAR APP NO HEROKU
     # components = pd.DataFrame({
     #     'first column': [1, 2, 3, 4],
     #     'second column': [10, 20, 30, 40]
