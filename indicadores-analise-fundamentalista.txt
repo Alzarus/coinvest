@@ -1,0 +1,31 @@
+Indicadores análise fundamentalista criptomoedas:
+
+NVT Ratio
+Objetivo: Assim como o preço/lucro no mercado de ações, ele valida se o ativo está em bolha.
+
+1 - Um alto NVT Ratio pode indicar alto valor especulativo.
+2 - Prever uma bolha antes do fato é bastante difícil, pois uma explosão de preços não significa necessariamente que o ativo está em uma bolha. Só podemos determinar isso após o pico, quando o mercado reavalia a nova avaliação e vemos se o preço se consolida ou cai.
+
+Por exemplo, a avaliação do Ethereum durante o primeiro trimestre de 2016 cresceu um fator de 15x, de US$ 70 milhões para mais de US$ 1 bilhão. Para os não iniciados, parecia uma bolha, mas não houve crash, sua nova avaliação foi sustentada, então provou que não era.
+
+Da mesma forma, o NVT Ratio não pode determinar com segurança uma bolha antes do tempo, mas é muito útil para discernir entre um crash ou uma consolidação após o pico do preço. Ele pode determinar isso de forma relativamente rápida.
+
+NVT baixo: tendência de alta.
+NVT alto: tendência de baixa.
+ 
+NVT classico = 28 dias de media movel (market cap diario/vol transacoes diario)
+NVT comum: entre 20 e 40
+NVT acima de 75: risco de bolha
+NVT acima de 100: Caso o aumento do NVT seja repentino, bolha confirmada.
+
+////////////////
+
+NVT melhorado (cryptolab) = (market cap diario) / 90 dias de media movel(vol transacoes diario)
+0 a 20: Zona azul
+20 a 30: Zona amarela
+30 em diante: Zona vermelha
+
+Toda vez que o NVT entrar nas zonas amarela e/ou vermelha, há uma correção de preço em seguida.
+
+Fraqueza do NVT: Apenas busca o dado de valor total de transações da rede, sem levar em conta o número de transações ou o número de carteiras participando dessas transações.
+Daily Active Addresses (DAA)
