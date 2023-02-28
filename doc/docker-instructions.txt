@@ -1,0 +1,11 @@
+Build the Docker image: Once you have created the Dockerfile, you can use the following command to build the Docker image:
+
+docker build -t <image-tag-name> .
+
+(This command will build an image based on the Dockerfile in the current directory and tag it with the specified name)
+
+Run the Docker container: Once the image is built, you can run the container using the following command:
+
+docker run -p 8051:8051 <image-name>
+
+(This command maps port 4000 on the host to port 80 on the container and starts the container)
