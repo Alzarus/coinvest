@@ -39,7 +39,7 @@ def load_data():
         response = requests.get(URL, headers=HEADERS, params=PARAMETERS)
         json_response = response.json()
         total_coins = json_response["status"]["total_count"]
-        # print(json.dumps(json_response, indent=4))
+        print(json.dumps(json_response, indent=4))
         json_response_data = json_response["data"]
         for data in json_response_data:
             data.pop("tags", None)
